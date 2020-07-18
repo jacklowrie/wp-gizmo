@@ -1,0 +1,13 @@
+{
+    "name": "wp-gizmo/wp-gizmo",
+    "description": "A starter plugin and build process for making modern WordPress plugins",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Jack Lowrie",
+            "email": "jack@4thwall.io"
+        }
+    ],
+    "require": {}
+}
