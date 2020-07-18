@@ -9,5 +9,8 @@
             "email": "jack@4thwall.io"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5"
+    }
 }
