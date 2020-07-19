@@ -69,9 +69,10 @@ plugin by default. with wp-gizmo-cli, you can rapidly scaffold new plugin
 components (`wp gizmo make:compoment`), tests (`wp gizmo make:test --component=NAME`),
 and even cli commands (`wp gizmo make:cli`) for use in your dev environment
 ## Including CLI commands in your plugin
-WP Gizmo's cli commands can be extended and included in your bundled plugin.If
-you choose to extend gizmo's wpcli commands with additional commands, add the 
-filepath to your `config.json`. During the bundle process, the root command will
-be rewritten to the name of your plugin (so in your dev environment, you run
-`wp gizmo refresh-opengraph-metadata`, but in your bundled plugin called `1440`,
-you'd run `wp 1440 refresh-opengraph-metadata`).
+WP Gizmo's cli commands can be extended and included in your bundled plugin. You can
+create new cli commands for your plugin from the command line:
+`wp gizmo make:cli --bundled=TRUE`. If you choose to extend gizmo's wpcli commands
+with additional commands, add the filepath to your `config.json`. During the bundle
+process, the root command will be rewritten to the name of your plugin (so in your dev
+environment, you run `wp gizmo refresh-opengraph-metadata`, but in your bundled plugin
+called `1440`, you'd run `wp 1440 refresh-opengraph-metadata`).
