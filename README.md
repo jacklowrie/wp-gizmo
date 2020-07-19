@@ -1,5 +1,5 @@
 # WP Gizmo
- Development environment for making WordPress plugins
+ Starter plugin and build process making WordPress plugins
 
 # Recommended Git Workflow
 ## For Individuals (and Individual Projects)
