@@ -47,10 +47,10 @@ the root command is `wp gizmo`. These commands are not included in your bundled
 plugin by default, though gizmo supports it. with wp-gizmo-cli, you can rapidly
 scaffold new plugin components, tests, and even cli commands for use in your Dev
 environment or in your bundled plugin. If you choose to extend gizmo's wpcli
-commands with additional commands specific to your plugin, the root command will
-be rewritten to the name of your plugin (so in your dev environment, you run
-`wp gizmo refresh-opengraph-metadata`, but in your bundled plugin called `1440`,
-you'd run `wp 1440 refresh-opengraph-metadata`).
+commands with additional commands you want to include in the bundled plugin, the
+root command will be rewritten to the name of your plugin during the bundle process
+(so in your dev environment, you run `wp gizmo refresh-opengraph-metadata`, but in
+your bundled plugin called `1440`, you'd run `wp 1440 refresh-opengraph-metadata`).
 # Using WP-Gizmo with WP Rig
 Gizmo draws a lot of inspiration from WP Rig, and can be used in tandem with it.
 This is especially useful if you're building a fully custom WordPress install
@@ -60,7 +60,7 @@ submodules, which are essentially nested repositories. Structuring a project
 this way, you can still take advantage of upstream improvements from both Rig
 and Gizmo, without needing to have multiple repositories for a single custom
 build.
-##Moving components from WP Rig to WP-Gizmo (and back again)
+## Moving components from WP Rig to WP-Gizmo (and back again)
 Because Gizmo's component class is modeled after Rig's component class,
 individual components can be moved back and forth relatively quickly -- it's as
 simple as updating the namespace registering the component, and (if you have any)
