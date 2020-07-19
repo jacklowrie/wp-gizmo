@@ -41,16 +41,6 @@ the Deplanitizer as a wordpress plugin, they'd call their repo
 would _not_ name it `gizmo-deplanitizer` or `deplanitizer-gizmo`. That said, it's
 more important to follow a naming convention that is consistent and makes sense
 to everyone on your team.
-# Gizmo CLI
-Gizmo comes with a wp-cli extension that is inspired by Laravel's artisan cli.
-the root command is `wp gizmo`. These commands are not included in your bundled
-plugin by default, though gizmo supports it. with wp-gizmo-cli, you can rapidly
-scaffold new plugin components, tests, and even cli commands for use in your Dev
-environment or in your bundled plugin. If you choose to extend gizmo's wpcli
-commands with additional commands you want to include in the bundled plugin, the
-root command will be rewritten to the name of your plugin during the bundle process
-(so in your dev environment, you run `wp gizmo refresh-opengraph-metadata`, but in
-your bundled plugin called `1440`, you'd run `wp 1440 refresh-opengraph-metadata`).
 # Using WP-Gizmo with WP Rig
 Gizmo draws a lot of inspiration from WP Rig, and can be used in tandem with it.
 This is especially useful if you're building a fully custom WordPress install
@@ -72,3 +62,16 @@ a component, chances are you're doing something that should probably go in a
 plugin anyway. If what you're doing doesn't require composer dependencies
 (and/or includes a lot of frontend assets), it may be better to put that component
 in a theme.
+# Gizmo CLI
+Gizmo comes with a wp-cli extension that is inspired by Laravel's artisan cli.
+the root command is `wp gizmo`. These commands are not included in your bundled
+plugin by default. with wp-gizmo-cli, you can rapidly scaffold new plugin
+components (`wp gizmo make:compoment`), tests (`wp gizmo make:test --component=NAME`),
+and even cli commands (`wp gizmo make:cli`) for use in your dev environment
+## Including CLI commands in your plugin
+WP Gizmo's cli commands can be extended and included in your bundled plugin.If
+you choose to extend gizmo's wpcli commands with additional commands, add the 
+filepath to your `config.json`. During the bundle process, the root command will
+be rewritten to the name of your plugin (so in your dev environment, you run
+`wp gizmo refresh-opengraph-metadata`, but in your bundled plugin called `1440`,
+you'd run `wp 1440 refresh-opengraph-metadata`).
