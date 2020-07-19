@@ -1,4 +1,4 @@
-# WP Gizmo
+# WP-Gizmo
  Starter plugin and build process making WordPress plugins
 
 # Recommended Git Workflow
