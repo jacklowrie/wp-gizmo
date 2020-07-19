@@ -1,6 +1,5 @@
-# WP Gizmo
- Starter plugin and build process making WordPress plugins
-
+# WP-Gizmo
+ Starter plugin and build process making WordPress plugins, inspired by and intended to work in tandem with [WP Rig](https://wprig.io).
 # Recommended Git Workflow
 ## For Individuals (and Individual Projects)
 This project is based on WP Rig, so the recommended git workflow is nearly
