@@ -63,5 +63,5 @@ build.
 ##Moving components from WP Rig to WP-Gizmo (and back again)
 Because Gizmo's component class is modeled after Rig's component class,
 individual components can be moved back and forth relatively quickly -- it's as
-simple as updating the namespace registering the component, and adding composer
-dependencies to your Gizmo.
+simple as updating the namespace registering the component, and (if you have any)
+adding any composer dependencies to your Gizmo.
