@@ -64,4 +64,10 @@ build.
 Because Gizmo's component class is modeled after Rig's component class,
 individual components can be moved back and forth relatively quickly -- it's as
 simple as updating the namespace registering the component, and (if you have any)
-adding any composer dependencies to your Gizmo.
+adding any composer dependencies to your Gizmo. Adding components to Rig is
+largely the same, though at the time of writing Rig does not offer an easy way to
+include composer packages in it's bundled theme. This makes for a pretty good
+guideline: if you _need_ a composer dependency for a component, chances are
+you're doing something that should probably go in a plugin anyway. If what you're
+doing doesn't require composer dependencies (and/or includes a lot of frontend
+assets), it may be better to put that component in a theme.
