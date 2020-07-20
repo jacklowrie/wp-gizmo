@@ -1,20 +1,38 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
+title: Feature Request
 labels: enhancement
-assignees: ''
+assignees: jacklowrie
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+<!--
+BEFORE POSTING YOUR FEATURE REQUEST:
+- These comments won't show up when you submit your request.
+- Check the issues page to ensure this feature has not already been requested.
+- Please use the sections below to provide information about the feature.
+- Be specific: Add as much detail as possible.
+- If the feature makes sense for WP-Gizmo, we'll try to implement or add it to a milestone ASAP.
+- Keep in mind, the fastest way to get this feature into WP-Gizmo after getting a feature request approved is to submit a pull request for it :)
+-->
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## Feature Overview
+<!-- A brief overview of the issue --->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## The Need
+<!-- What is WP-Gizmo not currently capable of?  -->
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## The Solution
+<!-- How can we improve on this project to address that need?  -->
+
+## Alternatives and Workarounds
+<!-- If you've thought of other solutions or alternative features to address the need, please tell us about them. Also, if you have an existing workaround, please detail it  -->
+
+## Additional Context
+<!--  Is there anything else that might help with this request? Screenshots, diagrams, examples, etc? -->
+
+## Related Issues and/or PRs
+<!-- List related issues or PRs against other branches -->
+
+<!-- Thanks! -->
