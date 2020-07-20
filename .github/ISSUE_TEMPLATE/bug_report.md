@@ -34,8 +34,11 @@ BEFORE POSTING YOUR BUG REPORT:
 ## Current Behavior
 <!-- What happened instead of the expected behavior? Describe the difference. -->
 
+## Workaround
+<!-- Optional: Have you found a way to make do in the absence of a proper fix? This will help others searching for an answer (at least until a fix is PR'd) -->
+
 ## Possible Solution
-<!-- Optional: Do you have a fix or a suggestion on how to fix the issue? -->
+<!-- Optional: Do you have a fix or a suggestion on how to fix the issue that's different or better than a workaround? -->
 
 ## Additional context
 <!-- Optional: Is there anything else that might be helpful to know? -->
