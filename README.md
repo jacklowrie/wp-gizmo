@@ -20,6 +20,7 @@ WP-Gizmo is meant to run in the plugins directory of a WordPress Installation. I
 This project doesn't have a build/bundle process yet, so if you're only worried about the short-term, you can name your project anything you like without a problem. However, the plan is to create a bundle process that will output a new directory named after your plugin, so I strongly recommend _against_ naming your repo after your plugin. Instead, consider suffixing your desired plugin name with `gizmo` or prefixing with `wp-gizmo`, though really any name that is different than your final plugin name will do:
 - `wp-gizmo-[plugin-name]`
 - `[plugin-name]-gizmo`
+
 So, if you were making the omniwrench as a WordPress plugin, you might call your repo `wp-gizmo-omniwrench` or `omniwrench-gizmo`. That way, when the bundle process is added to WP-Gizmo, its output will be a plugin directory called `omniwrench`, with a corresponding `omniwrench.php` inside.
 ## Recommended Git Workflow
 While not strictly necessary (this repo will still work without git/github), the following workflow is recommended for setting up new projects with WP-Gizmo.
