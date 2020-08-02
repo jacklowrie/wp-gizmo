@@ -3,7 +3,7 @@
 
 ## Issues
 <!-- please link the issue(s) that this PR will close, as well as any related PRs or issues it does not close. -->
-- closes #<!-- issue -->
+- [closes | fixes | resolves] #<!-- issue -->
 - [needed for | related to] #<!-- issue or PR -->
 
 ## PR Type
