@@ -13,7 +13,7 @@
  * Version:           1.0.0
  * Requires at least: 5.0
  * Requires PHP:      7.0
- * Author:            Your Name
+ * Author:            Jack Lowrie
  * Author URI:        https://wpgizmo.dev
  * Text Domain:       plugin-slug
  * License:           GPL v3 or later
