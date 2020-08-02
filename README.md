@@ -5,10 +5,6 @@
 - [Installation](#installation)
   * [Step by Step Installation](#step-by-step-installation)
   * [Naming your Project Repository](#naming-your-project-repository)
-  * [Recommended Git Workflow](#recommended-git-workflow)
-    + [For Individuals (and Individual Projects)](#for-individuals--and-individual-projects-)
-    + [For Teams (agencies, organizations, any group of people that will build more than one plugin together)](#for-teams--agencies--organizations--any-group-of-people-that-will-build-more-than-one-plugin-together-)
-      - [Naming Individual Plugin repositories for Teams](#naming-individual-plugin-repositories-for-teams)
 - [Usage](#usage)
 
 # Installation
