@@ -20,4 +20,4 @@
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-$var = 0;
+// Here's where your functions go.
