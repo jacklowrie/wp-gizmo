@@ -11,10 +11,10 @@
 - [ ] bugfix
 - [ ] new feature
 - [ ] breaking change
-- [ ] requires docs update
 
 ## Documentation
 <!-- please include any relevant documentation that can be added to the wiki. If you have made a change to the README, thank you and check the box :) -->
+- [ ] requires docs update
 - [ ] This PR includes an update to `readme.md`
 
 ## Formatting and Testing
