@@ -3,8 +3,8 @@
 
 ## Issues
 <!-- please link the issue(s) that this PR will close, as well as any related PRs or issues it does not close. -->
-- [closes | fixes | resolves] #<!-- issue -->
-- [needed for | related to] #<!-- issue or PR -->
+- [closes | fixes | resolves] #<!-- Every PR should address an issue. -->
+- [needed for | related to] #<!-- Some PRs might be related to additional issues or PRs without closing them. -->
 
 ## PR Type
 <!-- please delete options that are not relevant. -->
