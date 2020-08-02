@@ -1,17 +1,30 @@
 # WP-Gizmo
  Starter plugin and build process for making WordPress plugins, inspired by and intended to work in tandem with [WP Rig](https://wprig.io).
 
+# Table of Contents
+- [Installation](#installation)
+  * [Step by Step Installation](#step-by-step-installation)
+  * [Naming your Project Repository](#naming-your-project-repository)
+  * [Recommended Git Workflow](#recommended-git-workflow)
+    + [For Individuals (and Individual Projects)](#for-individuals--and-individual-projects-)
+    + [For Teams (agencies, organizations, any group of people that will build more than one plugin together)](#for-teams--agencies--organizations--any-group-of-people-that-will-build-more-than-one-plugin-together-)
+      - [Naming Individual Plugin repositories for Teams](#naming-individual-plugin-repositories-for-teams)
+- [Usage](#usage)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 # Installation
 WP-Gizmo is meant to run in the plugins directory of a WordPress Installation. If you plan to use github for version control on your new plugin, the easiest way to do this is to click the green `Use This Template` button from the homepage of this repo, choose a new name, and then pull it down to the plugins directory of your development environment's WordPress installation. However, you can also clone or download this repo into the plugins directory of your development environment's wordpress installation go from there.
+## Step by Step Installation
+1. Create a new repo from this template on GitHub, or clone this repo down to the plugins directory of your dev environment's WordPress installation and name it `[your-plugin-name]-gizmo`.
+2. From the WordPress dashboard, activate the WP-Gizmo development plugin.
 ## Naming your Project Repository
 This project doesn't have a build/bundle process yet, so if you're only worried about the short-term, you can name your project anything you like without a problem. However, the plan is to create a bundle process that will output a new directory named after your plugin, so I strongly recommend _against_ naming your repo after your plugin. Instead, consider suffixing your desired plugin name with `gizmo` or prefixing with `wp-gizmo`, though really any name that is different than your final plugin name will do:
 - `wp-gizmo-[plugin-name]`
 - `[plugin-name]-gizmo`
 So, if you were making the omniwrench as a WordPress plugin, you might call your repo `wp-gizmo-omniwrench` or `omniwrench-gizmo`. That way, when the bundle process is added to WP-Gizmo, its output will be a plugin directory called `omniwrench`, with a corresponding `omniwrench.php` inside.
-## Step by Step Installation
-1. Create a new repo from this template on GitHub, or clone this repo down to the plugins directory of your dev environment's WordPress installation and name it `[your-plugin-name]-gizmo`.
-2. From the WordPress dashboard, activate the WP-Gizmo development plugin.
 ## Recommended Git Workflow
+While not strictly necessary (this repo will still work without git/github), the following workflow is recommended for setting up new projects with WP-Gizmo.
 ### For Individuals (and Individual Projects)
 This project is based on WP Rig, so our recommended git workflow is nearly identical to [their git workflow](https://github.com/wprig/docs/blob/master/documentation/git-workflow.md#recommended-git-workflow). The bird's eye view is to follow the instructions in the step-by-step above to set up your project, then set the upstream to this repo. That way, as improvements are made to WP-Gizmo, you can merge them into your own project(s) as they make sense. So `wp-gizmo` is upstream of `[your-plugin]-gizmo`.
 ### For Teams (agencies, organizations, any group of people that will build more than one plugin together)
