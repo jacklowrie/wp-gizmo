@@ -35,53 +35,9 @@
 
 	<!--
 	#############################################################################
-	USE THE WordPress-Coding-Standards RULESET
+	USE NeutronRuleset
 	#############################################################################
 	-->
-
-	<rule ref="WordPress"/>
-	<rule ref="WordPress-Core" />
-	<rule ref="WordPress-Docs" />
-	<rule ref="WordPress-Extra" />
-
-	<!--
-	#############################################################################
-	SNIFF SPECIFIC CONFIGURATION
-	#############################################################################
-	-->
-
-	<!-- Verify that the text_domain is set to the desired text-domain.
-		 Multiple valid text domains can be provided as a comma-delimited list. -->
-	<rule ref="WordPress.WP.I18n">
-		<properties>
-			<property name="text_domain" type="array" value="wp-gizmo"/>
-		</properties>
-	</rule>
-
-	<!-- Allow for theme specific exceptions to the file name rules based
-		 on the theme hierarchy and ensure PSR-4 autoloading compatibility. -->
-	<rule ref="WordPress.Files.FileName">
-		<properties>
-			<property name="strict_class_file_names" value="false" />
-			<property name="is_theme" value="true"/>
-		</properties>
-		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
-	</rule>
-
-	<!-- Set the minimum supported WP version. This is used by several sniffs.
-		 The minimum version set here should be in line with the minimum WP version
-		 as set in the "Requires at least" tag in the readme.txt file. -->
-	<config name="minimum_supported_wp_version" value="5.0"/>
-
-	<rule ref="WordPress.Arrays.MultipleStatementAlignment">
-		<properties>
-			<!-- No need to adjust alignment of large arrays when the item with the largest key is removed. -->
-			<property name="exact" value="false"/>
-			<!-- Don't align multi-line items if ALL items in the array are multi-line. -->
-			<property name="alignMultilineItems" value="!=100"/>
-			<!-- Array assignment operator should always be on the same line as the array key. -->
-			<property name="ignoreNewlines" value="false"/>
-		</properties>
-	</rule>
+	<rule ref="NeutronRuleset"/>
 
 </ruleset>
