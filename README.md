@@ -6,6 +6,7 @@
   * [Step by Step Installation](#step-by-step-installation)
   * [Naming your Project Repository](#naming-your-project-repository)
 - [Usage](#usage)
+- [Documentation](#documentation)
 
 # Installation
 WP-Gizmo is meant to run in the plugins directory of a WordPress Installation. If you plan to use github for version control on your new plugin, the easiest way to do this is to click the green `Use This Template` button from the homepage of this repo, choose a new name, and then pull it down to the plugins directory of your development environment's WordPress installation. However, you can also clone or download this repo into the plugins directory of your development environment's wordpress installation go from there.
@@ -22,3 +23,5 @@ So, if you were making the omniwrench as a WordPress plugin, you might call your
 While not strictly necessary (this repo will still work in a vacuum as a starting place), WP-Gizmo works best when you take advantage of Git/GitHub. That way, when there are updates to WP-Gizmo, you can pull them into your plugin (or custom version) using version control! Check out the wiki page on WP-Gizmo's [recommended git workflow](https://github.com/jacklowrie/wp-gizmo/wiki/Recommended-Git-Workflow) for step-by-step instructions and naming best-practices.
 # Usage
 At present, once WP-Gizmo installed, it's essentially a single-file plugin with a linting setup, ready for you to hack on. Add your functionality to `wp-gizmo.php` and test in your local WordPress install. If you'd like to make a production bundle, duplicate the entire directory and rename it to your desired plugin name, rename `wp-gizmo.php` to `[your-plugin-name].php`, and remove any unnecessary files (that will likely mean everything other than the main file you just renamed). This will be automated in v0.2, once we've picked a build tool and added a bundle process.
+# Documentation
+Currently, all documentation lives in this readme and in the [WP-Gizmo wiki](https://github.com/jacklowrie/wp-gizmo/wiki). There isn't much, but as issues get reported, questions get asked, and WP-Gizmo gets built out, the docs will become more robust. So if you need docs for something, please file an issue!
