@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jacklowrie/wp-gizmo/issues"
   },
-  "homepage": "https://github.com/jacklowrie/wp-gizmo#readme"
+  "homepage": "https://github.com/jacklowrie/wp-gizmo#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
