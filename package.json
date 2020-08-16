@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/jacklowrie/wp-gizmo#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/register": "^7.10.5",
     "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0"
+    "gulp-babel": "^8.0.0-beta.2"
   }
 }
