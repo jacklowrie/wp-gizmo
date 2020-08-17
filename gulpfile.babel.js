@@ -22,7 +22,14 @@ function watchGulpFile() {
       .watch('./gulpfile.babel.js', lint);
 }
 
+function bundle() {
+  return gulp
+      .src('*.php')
+      .pipe(gulp.dest(`../${config.plugin.slug}/`));
+}
+
 exports.hello = hello;
 exports.lint = lint;
 exports.watch = watchGulpFile;
 exports.default = gulp.series(lint, watchGulpFile);
+exports.bundle = bundle;
