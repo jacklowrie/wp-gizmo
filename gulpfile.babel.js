@@ -2,7 +2,9 @@
 
 const gulp = require('gulp');
 
-gulp.task('hello', function(done) {
+function hello(done) {
 	console.log("Hi, I'm Gizmo!");
 	return done();
-});
+}
+
+exports.hello = hello;
