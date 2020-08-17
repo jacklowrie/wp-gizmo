@@ -2,9 +2,11 @@
 
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
+const config = require('./config.json');
 
 function hello(done) {
   console.log('Hi, I\'m Gizmo!');
+  console.log(`Config name is: ${config.name}`);
   return done();
 }
 
