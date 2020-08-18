@@ -37,11 +37,11 @@ function bundle() {
   fs.mkdirSync(productionDirectory);
 
   const stringReplaceOptions = {
-				logs: {
-					enabled: false,
-				},
-				searchValue: 'regex',
-			};
+    logs: {
+      enabled: false,
+    },
+    searchValue: 'regex',
+  };
 
   return gulp
       .src('wp-gizmo.php')
