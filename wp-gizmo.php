@@ -1,6 +1,6 @@
 <?php
 /**
- * Gizmo
+ * WP-Gizmo
  *
  * @package           wp-gizmo
  * @author            Jack Lowrie
@@ -13,7 +13,7 @@
  * Version:           1.0.0
  * Requires at least: 5.0
  * Requires PHP:      7.0
- * Author:            Jack Lowrie
+ * Author:            Gizmo Author
  * Author URI:        https://wpgizmo.dev
  * Text Domain:       plugin-slug
  * License:           GPL v3 or later

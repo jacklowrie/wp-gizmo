@@ -1,0 +1,15 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "google"
+    ],
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+      "require-jsdoc": 0
+    }
+}
