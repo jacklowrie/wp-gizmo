@@ -3,6 +3,7 @@
 
 # Table of Contents
 - [Installation](#installation)
+  * [Dependencies](#dependencies)
   * [Step by Step Installation](#step-by-step-installation)
   * [Naming your Project Repository](#naming-your-project-repository)
 - [Usage](#usage)
