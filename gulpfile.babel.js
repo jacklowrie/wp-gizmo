@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const rename = require('gulp-rename');
+const stringReplace = require('gulp-string-replace');
 const config = require('./config.json');
 const fs = require('fs');
 const rimraf = require('rimraf');
@@ -35,9 +36,27 @@ function bundle() {
   }
   fs.mkdirSync(productionDirectory);
 
+  const stringReplaceOptions = {
+				logs: {
+					enabled: false,
+				},
+				searchValue: 'regex',
+			};
+
   return gulp
       .src('wp-gizmo.php')
       .pipe(rename(`${config.plugin.slug}.php`))
+      .pipe(stringReplace(
+          /wp-gizmo/g,
+          config.plugin.slug,
+          stringReplaceOptions
+      ))
+      .pipe(stringReplace(
+          /WP-Gizmo/g,
+          config.plugin.name,
+          stringReplaceOptions
+      ))
+
       .pipe(gulp.dest(productionDirectory));
 }
 
