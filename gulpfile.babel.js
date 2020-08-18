@@ -7,7 +7,8 @@ const config = require('./config.json');
 const fs = require('fs');
 const rimraf = require('rimraf');
 
-const productionDirectory = `../${config.plugin.slug}/`;
+const wpGizmoDirectory = process.cwd();
+const productionDirectory = `${wpGizmoDirectory}/../${config.plugin.slug}/`;
 
 function hello(done) {
   console.log('Hi, I\'m Gizmo!');
@@ -29,9 +30,11 @@ function watchGulpFile() {
 
 function bundle() {
   if (fs.existsSync(productionDirectory)) {
-    console.log('removing old production directory...')
+    console.log('removing old production directory...');
     rimraf.sync( productionDirectory );
   }
+  fs.mkdirSync(productionDirectory);
+
   return gulp
       .src('wp-gizmo.php')
       .pipe(rename(`${config.plugin.slug}.php`))
