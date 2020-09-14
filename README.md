@@ -1,5 +1,5 @@
 # WP-Gizmo
- Starter plugin and build process for making WordPress plugins, inspired by and intended to work in tandem with [WP Rig](https://wprig.io).
+ Starter plugin and build process for making WordPress plugins, inspired by and intended to work in tandem with [WP Rig](https://wprig.io), or any theme using WP Rig as a boilerplate.
 
 # Table of Contents
 - [Installation](#installation)
