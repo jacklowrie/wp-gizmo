@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/jacklowrie/wp-gizmo#readme",
   "devDependencies": {
-    "@babel/core": "^7.12.10",
+    "@babel/core": "^7.12.13",
     "@babel/register": "^7.12.10",
     "eslint": "^7.19.0",
     "eslint-config-google": "^0.14.0",
