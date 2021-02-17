@@ -1,7 +1,8 @@
 'use strict';
 
+import lint from './gulp/lint';
+
 const gulp = require('gulp');
-const eslint = require('gulp-eslint');
 const rename = require('gulp-rename');
 const stringReplace = require('gulp-string-replace');
 const config = require('./config.json');
@@ -15,13 +16,6 @@ function hello(done) {
   console.log('Hi, I\'m Gizmo!');
   console.log(`Config name is: ${config.name}`);
   return done();
-}
-
-function lint() {
-  return gulp
-      .src('./gulpfile.babel.js')
-      .pipe(eslint())
-      .pipe(eslint.format());
 }
 
 function watchGulpFile() {
