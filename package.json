@@ -39,5 +39,8 @@
     "jest": "^26.4.2",
     "rimraf": "^3.0.2",
     "yargs-parser": ">=20.2.4"
+  },
+  "dependencies": {
+    "lazypipe": "^1.0.2"
   }
 }
