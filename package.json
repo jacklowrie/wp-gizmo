@@ -42,5 +42,8 @@
   },
   "dependencies": {
     "lazypipe": "^1.0.2"
+  },
+  "scripts": {
+    "test":"jest"
   }
 }
