@@ -1,11 +1,11 @@
 'use strict';
 
-const pipes = require('./gulp/pipes');
-
 const gulp = require('gulp');
-const config = require('./config.json');
 const fs = require('fs');
 const rimraf = require('rimraf');
+
+const pipes = require('./gulp/pipes');
+const config = require('./config.json');
 
 const wpGizmoDirectory = process.cwd();
 const productionDirectory = `${wpGizmoDirectory}/../${config.plugin.slug}/`;
@@ -18,7 +18,7 @@ function hello(done) {
 
 function lint(done) {
   gulp.src('./gulpfile.babel.js')
-    .pipe(pipes.lint());
+      .pipe(pipes.lint());
   return done();
 }
 
@@ -35,8 +35,8 @@ function bundle(done) {
   fs.mkdirSync(productionDirectory);
 
   gulp.src('wp-gizmo.php')
-    .pipe(pipes.bundle())
-    .pipe(gulp.dest(productionDirectory));
+      .pipe(pipes.bundle())
+      .pipe(gulp.dest(productionDirectory));
 
   return done();
 }
@@ -44,5 +44,5 @@ function bundle(done) {
 exports.hello = hello;
 exports.lint = lint;
 exports.watch = watchGulpFile;
-// exports.default = gulp.series(lint, watchGulpFile);
+exports.default = gulp.series(lint, watchGulpFile);
 exports.bundle = bundle;
