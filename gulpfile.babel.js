@@ -1,6 +1,6 @@
 'use strict';
 
-const lint = require('./gulp/lint');
+const pipes = require('./gulp/pipes');
 
 const gulp = require('gulp');
 const rename = require('gulp-rename');
@@ -8,7 +8,6 @@ const stringReplace = require('gulp-string-replace');
 const config = require('./config.json');
 const fs = require('fs');
 const rimraf = require('rimraf');
-const eslint = require('gulp-eslint');
 
 const wpGizmoDirectory = process.cwd();
 const productionDirectory = `${wpGizmoDirectory}/../${config.plugin.slug}/`;
@@ -22,8 +21,7 @@ function hello(done) {
 function lint() {
   return gulp
       .src('./gulpfile.babel.js')
-      .pipe(eslint())
-      .pipe(eslint.format());
+      .pipe(pipes.lint());
 }
 
 function watchGulpFile() {
