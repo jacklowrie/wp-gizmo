@@ -1,57 +1,44 @@
 'use strict';
 
-import lint from './gulp/lint';
-
 const gulp = require('gulp');
-const rename = require('gulp-rename');
-const stringReplace = require('gulp-string-replace');
-const config = require('./config.json');
 const fs = require('fs');
 const rimraf = require('rimraf');
+
+const pipes = require('./gulp/pipes');
+const config = require('./config.json');
 
 const wpGizmoDirectory = process.cwd();
 const productionDirectory = `${wpGizmoDirectory}/../${config.plugin.slug}/`;
 
 function hello(done) {
   console.log('Hi, I\'m Gizmo!');
-  console.log(`Config name is: ${config.name}`);
+  console.log(`Plugin name is: ${config.plugin.name}`);
   return done();
 }
 
-function watchGulpFile() {
-  return gulp
-      .watch('./gulpfile.babel.js', lint);
+function lint(done) {
+  gulp.src('./gulpfile.babel.js')
+      .pipe(pipes.lint());
+  return done();
 }
 
-function bundle() {
+function watchGulpFile(done) {
+  gulp.watch('./gulpfile.babel.js', lint);
+  done();
+}
+
+function bundle(done) {
   if (fs.existsSync(productionDirectory)) {
     console.log('removing old production directory...');
     rimraf.sync( productionDirectory );
   }
   fs.mkdirSync(productionDirectory);
 
-  const stringReplaceOptions = {
-    logs: {
-      enabled: false,
-    },
-    searchValue: 'regex',
-  };
-
-  return gulp
-      .src('wp-gizmo.php')
-      .pipe(rename(`${config.plugin.slug}.php`))
-      .pipe(stringReplace(
-          /wp-gizmo/g,
-          config.plugin.slug,
-          stringReplaceOptions
-      ))
-      .pipe(stringReplace(
-          /WP-Gizmo/g,
-          config.plugin.name,
-          stringReplaceOptions
-      ))
-
+  gulp.src('wp-gizmo.php')
+      .pipe(pipes.bundle())
       .pipe(gulp.dest(productionDirectory));
+
+  return done();
 }
 
 exports.hello = hello;

@@ -4,7 +4,7 @@
   "description": "A starter plugin and build process for making modern WordPress plugins",
   "main": "wp-gizmo.php",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/jacklowrie/wp-gizmo#readme",
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/register": "^7.12.10",
-    "eslint": "^7.19.0",
+    "@babel/core": "^7.13.10",
+    "@babel/register": "^7.13.8",
+    "eslint": "^7.22.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
@@ -36,8 +36,12 @@
     "gulp-eslint": "^6.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-string-replace": "^1.1.2",
-    "jest": "^26.4.2",
+    "jest": "^26.6.3",
     "rimraf": "^3.0.2",
-    "yargs-parser": ">=20.2.4"
+    "vinyl-fs-fake": "^1.1.1",
+    "yargs-parser": ">=20.2.7"
+  },
+  "dependencies": {
+    "lazypipe": "^1.0.2"
   }
 }
