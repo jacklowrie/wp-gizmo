@@ -23,4 +23,4 @@ WP-Gizmo requires composer and npm to run properly.
 At present, WP-Gizmo is essentially a single-file plugin with a linting setup, ready for you to hack on. Add your functionality to `wp-gizmo.php` and test in your local WordPress install. When you're ready to ship your plugin, doublecheck your plugin comment in the main file as well as the slug and name in `config.json`, then run `gulp bundle`. This will create a new directory in your WordPress plugins directory with your plugin name and slug switched in.
 
 # Documentation
-Currently, all documentation lives in this readme and in the [WP-Gizmo wiki](https://github.com/jacklowrie/wp-gizmo/wiki). There isn't much, but as WP-Gizmo gets built out, the docs will become more robust. So if you need docs for something, please file an issue or get in touch!
+Currently, all documentation lives in this readme and in the [WP-Gizmo wiki](https://github.com/jacklowrie/wp-gizmo/wiki). There isn't much, but as WP-Gizmo gets built out, the docs will become more robust. So if you need help, please file an issue or get in touch!
