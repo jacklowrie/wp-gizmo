@@ -20,3 +20,8 @@
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  */
 declare( strict_types = 1 );
+
+require_once(__DIR__ . '/autoloader.php');
+WPGizmo_Autoloader::register();
+
+$test = new WPGizmo\WPGizmo\Test\MyTest();
