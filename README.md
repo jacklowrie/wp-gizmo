@@ -12,7 +12,7 @@
 # Installation
 WP-Gizmo is meant to run in the plugins directory of a WordPress Installation. If you plan to use github for version control on your new plugin, the easiest way to do this is to click the green `Use This Template` button from the homepage of this repo, choose a new name, and then pull it down to the plugins directory of your development environment's WordPress installation. However, you can also clone or download this repo into the plugins directory of your development environment's wordpress installation go from there.
 ## Dependencies
-WP-Gizmo requires composer and npm to run properly. The bundled plugin will not require either.
+WP-Gizmo requires composer and npm to run properly for development. The bundled plugin will not require either.
 ## Step by Step Installation
 1. Create a new repo from this template on GitHub, or clone this repo down to the plugins directory of your dev environment's WordPress installation.
 2. Activate the plugin.
