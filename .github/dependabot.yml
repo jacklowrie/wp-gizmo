@@ -4,13 +4,13 @@ updates:
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
-    target-branch: "development"
+    target-branch: "develop"
     schedule:
       interval: "monthly"
 
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
     directory: "/"
-    target-branch: "development"
+    target-branch: "develop"
     schedule:
       interval: "monthly"
