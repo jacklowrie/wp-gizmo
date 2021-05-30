@@ -21,6 +21,8 @@
  */
 declare( strict_types = 1 );
 
-require_once(__DIR__ . '/autoloader.php');
-WPGizmo_Autoloader::register();
+require_once( __DIR__ . '/autoloader.php' );
+Gizmo_Autoloader::register();
 
+$gizmo = new Gizmo();
+$gizmo->init();

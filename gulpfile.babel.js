@@ -9,6 +9,7 @@ const config = require('./config.json');
 
 const wpGizmoDirectory = process.cwd();
 const productionDirectory = `${wpGizmoDirectory}/../${config.plugin.slug}/`;
+const productionInc = productionDirectory + 'inc/';
 
 function hello(done) {
   console.log('Hi, I\'m Gizmo!');
@@ -32,11 +33,27 @@ function bundle(done) {
     console.log('removing old production directory...');
     rimraf.sync( productionDirectory );
   }
+
   fs.mkdirSync(productionDirectory);
+  fs.mkdirSync(`${productionDirectory}inc/`);
+
+  gulp.src(['*.php', '!wp-gizmo.php'])
+      .pipe(pipes.nameReplace())
+      .pipe(gulp.dest(productionDirectory));
+
+  gulp.src(['inc/*.php', '!inc/gizmo.php'])
+      .pipe(pipes.nameReplace())
+      .pipe(gulp.dest(productionInc));
 
   gulp.src('wp-gizmo.php')
-      .pipe(pipes.bundle())
+      .pipe(pipes.nameReplace())
+      .pipe(pipes.renameSlug())
       .pipe(gulp.dest(productionDirectory));
+
+  gulp.src('inc/gizmo.php')
+      .pipe(pipes.nameReplace())
+      .pipe(pipes.renameSlug())
+      .pipe(gulp.dest(productionInc));
 
   return done();
 }

@@ -7,17 +7,17 @@
  * @link https://carlalexander.ca/organizing-files-object-oriented-wordpress-plugin/#psr-0-example
  *
  */
-class WPGizmo_Autoloader {
+class Gizmo_Autoloader {
 	/**
 	 * Registers MyPlugin_Autoloader as an SPL autoloader.
 	 *
 	 * @param boolean $prepend
 	 */
 	public static function register( $prepend = false ) {
-		if (version_compare(phpversion(), '5.3.0', '>=')) {
-			spl_autoload_register(array(new self, 'autoload'), true, $prepend);
+		if ( version_compare( phpversion(), '5.3.0', '>=' ) ) {
+			spl_autoload_register( [ new self, 'autoload' ], true, $prepend );
 		} else {
-			spl_autoload_register(array(new self, 'autoload'));
+			spl_autoload_register( [ new self, 'autoload' ] );
 		}
 	}
 
@@ -28,7 +28,7 @@ class WPGizmo_Autoloader {
 	 */
 	public static function autoload( $class ) {
 
-		$namespace = 'WPGizmo\WPGizmo';
+		$namespace = 'WP_Gizmo\Gizmo';
 
 		if ( 0 !== strpos( $class, $namespace ) ) {
 			return;
