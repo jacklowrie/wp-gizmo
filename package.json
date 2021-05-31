@@ -4,7 +4,8 @@
   "description": "A starter plugin and build process for making modern WordPress plugins",
   "main": "wp-gizmo.php",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",

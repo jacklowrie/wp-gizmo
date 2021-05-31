@@ -35,19 +35,19 @@ const nameReplace = lazypipe()
     .pipe(
         stringReplace,
         /WP_Gizmo/g,
-        config.plugin.name.replace(' ', '_'),
+        config.plugin.name.replace(/\s/g, '_'),
         stringReplaceOptions
     )
     .pipe(
         stringReplace,
         /Gizmo/g,
-        config.plugin.name.replace(' ', ''),
+        config.plugin.name.replace(/\s/g, ''),
         stringReplaceOptions
     )
     .pipe(
         stringReplace,
         /gizmo/g,
-        config.plugin.slug.replace('-', '_'),
+        config.plugin.slug.replace(/-/g, '_'),
         stringReplaceOptions
     );
 
@@ -57,6 +57,13 @@ const renameSlug = lazypipe()
         `${config.plugin.slug}.php`
     );
 
+const renameMainPluginClass = lazypipe()
+    .pipe(
+        rename,
+        `${config.plugin.name.replace(/\s/g, '')}.php`
+    );
+
 exports.lint = lint;
 exports.nameReplace = nameReplace;
 exports.renameSlug = renameSlug;
+exports.renameMainPluginClass = renameMainPluginClass;

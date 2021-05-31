@@ -2,5 +2,9 @@
   "plugin":{
     "slug": "new-plugin",
     "name": "New Plugin"
-  }
+  },
+  "filesToCopy": [
+    "readme.txt",
+    "license"
+  ]
 }
