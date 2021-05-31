@@ -58,6 +58,11 @@ function bundle(done) {
   gulp.src(config.filesToCopy)
       .pipe(gulp.dest(productionDirectory));
 
+  gulp.src('inc/gizmo.php')
+      .pipe(pipes.nameReplace())
+      .pipe(pipes.renameSlug())
+      .pipe(gulp.dest(productionInc));
+
   return done();
 }
 

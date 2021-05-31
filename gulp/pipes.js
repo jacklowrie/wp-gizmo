@@ -67,4 +67,3 @@ exports.lint = lint;
 exports.nameReplace = nameReplace;
 exports.renameSlug = renameSlug;
 exports.renameMainPluginClass = renameMainPluginClass;
-
