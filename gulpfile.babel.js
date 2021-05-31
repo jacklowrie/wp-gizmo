@@ -55,6 +55,9 @@ function bundle(done) {
       .pipe(pipes.renameSlug())
       .pipe(gulp.dest(productionInc));
 
+  gulp.src(config.filesToCopy)
+      .pipe(gulp.dest(productionDirectory));
+
   return done();
 }
 
