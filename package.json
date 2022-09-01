@@ -37,7 +37,7 @@
     "gulp-eslint": "^6.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-string-replace": "^1.1.2",
-    "jest": "^26.6.3",
+    "jest": "^29.0.1",
     "rimraf": "^3.0.2",
     "vinyl-fs-fake": "^1.1.1",
     "yargs-parser": ">=20.2.7"
